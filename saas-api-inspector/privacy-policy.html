@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — SaaS API Inspector</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 2rem;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    p, li {
+      color: var(--muted);
+      margin: 0.5rem 0;
+    }
+    ul {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    strong { color: var(--text); }
+    .highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">SaaS API Inspector — Last updated: March 2025</p>
+
+  <p>
+    SaaS API Inspector (“the Extension”) is a developer tool that analyzes and categorizes API requests made by web pages you visit. This policy describes what data the Extension uses and how it is handled.
+  </p>
+
+  <h2>Data the extension processes</h2>
+  <p>
+    The Extension only processes data necessary to show API activity for the page you are viewing:
+  </p>
+  <ul>
+    <li><strong>Request metadata:</strong> URL, HTTP method, path, status code, and timestamp of API requests (XHR/fetch) from the active browser tab.</li>
+    <li><strong>Request headers:</strong> Header names and values are read to detect authentication type (e.g. JWT, Bearer, session cookie). Sensitive header values are never stored or displayed in full (see below).</li>
+  </ul>
+
+  <h2>Sensitive data is never stored</h2>
+  <div class="highlight">
+    <strong>Authorization, Cookie, and Token headers are masked before any use.</strong> Their values are replaced with a placeholder (<code>****MASKED****</code>) and the Extension never logs, stores, or transmits the actual credentials.
+  </div>
+
+  <h2>Where data is stored</h2>
+  <ul>
+    <li><strong>Session storage:</strong> Analyzed API request data (URLs, methods, categories, masked headers) for the current tab is kept in the browser’s session storage. It is cleared when you close the tab or the browser.</li>
+    <li><strong>Local storage:</strong> Only your preferences are stored locally (e.g. which file types to exclude from the list per site). No request content or credentials are saved in local storage.</li>
+  </ul>
+
+  <h2>No data sent to us or third parties</h2>
+  <p>
+    The Extension does not send any data to the developer or to any external servers. All processing happens on your device. Exports (e.g. OpenAPI or Postman) are downloaded as files on your machine only.
+  </p>
+
+  <h2>Permissions</h2>
+  <p>
+    The Extension requests:
+  </p>
+  <ul>
+    <li><strong>activeTab</strong> — to know which tab is active and show API activity for that tab only.</li>
+    <li><strong>storage</strong> — to keep session data and your local preferences (e.g. filter settings).</li>
+    <li><strong>webRequest</strong> and <strong>host permissions</strong> — to observe request URLs, methods, and headers so it can analyze and categorize API calls. Request bodies are not read; sensitive header values are masked as described above.</li>
+  </ul>
+
+  <h2>Your choices</h2>
+  <p>
+    You can clear the current session at any time using “Clear session” in the Extension. Uninstalling the Extension removes all stored preferences. Session data is not retained after you close the tab or browser.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update this privacy policy from time to time. The “Last updated” date at the top will be revised when changes are made. Continued use of the Extension after changes constitutes acceptance of the updated policy.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    For questions about this privacy policy or the Extension’s data practices, please use the contact or support channel provided in the Chrome Web Store listing for SaaS API Inspector.
+  </p>
+
+  <footer>
+    © 2025 SaaS API Inspector. This extension is provided for developer productivity and debugging. Use in accordance with applicable terms and the websites you inspect.
+  </footer>
+</body>
+</html>
